@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using CustomMiddlewareWebApp.Middlewares;
 
 namespace CustomMiddlewareWebApp
 {
@@ -55,6 +56,7 @@ namespace CustomMiddlewareWebApp
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            app.UseHtmlMinifier();
         }
     }
 }
